@@ -5,10 +5,20 @@ const ICONS = [
   { img: "/assets/svc/graphic.jpg" },
   { img: "/assets/svc/ai-video.jpg" },
   { bg: "#21759B", svg: GLOBE },
-  {
-    bg: "linear-gradient(45deg,#FEDA75,#FA7E1E 25%,#D62976 50%,#962FBF 75%,#4F5BD5)",
-    svg: `<path fill="#fff" d="${IG}"/>`,
-  },
+  // Mobile Application Development
+{
+  bg: "linear-gradient(135deg, #168BFF, #795BFF)",
+  svg: `
+    <rect x="7" y="2" width="10" height="20" rx="2.5"
+      fill="none" stroke="#fff" stroke-width="1.8"/>
+    <path d="M10 5h4M11 19h2"
+      stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+    <rect x="9" y="8" width="2.5" height="2.5" rx=".5" fill="#fff"/>
+    <rect x="13" y="8" width="2.5" height="2.5" rx=".5" fill="#fff"/>
+    <rect x="9" y="12" width="2.5" height="2.5" rx=".5" fill="#fff"/>
+    <rect x="13" y="12" width="2.5" height="2.5" rx=".5" fill="#fff"/>
+  `,
+},
   { img: "/assets/svc/google-ads.png" },
   { img: "/assets/svc/meta.png" },
 ];

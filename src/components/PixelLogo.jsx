@@ -230,7 +230,7 @@ export default function PixelLogo() {
       </div>
       <i className="cm tl" /><i className="cm tr" /><i className="cm bl" /><i className="cm br" />
       <canvas ref={gl} className="gl4" aria-hidden="true" />
-      <p className="hint" aria-hidden="true">Move over the logo · tap to scatter</p>
+      <p className="hint" aria-hidden="true">Move over the logo · To Experience the Magic </p>
       <img ref={fallback} hidden src="/assets/pixeldreamai-logo-full.png" alt="" className="absolute inset-[12%] h-3/4 w-3/4 object-contain" />
     </div>
   );

@@ -16,7 +16,7 @@ const SERVICES = [
   "Graphic Designing",
   "AI Videos",
   "Website Designing",
-  "Digital Marketing",
+  "App Development",
   "Google Ads",
   "Meta Ads",
 ];
