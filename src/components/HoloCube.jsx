@@ -7,6 +7,7 @@ const FACES = [
   { n: "Meta Ads", icon: 5, blurb: "Facebook and Instagram campaigns" },
   { n: "Website Designing", icon: 2, blurb: "Fast, modern, mobile-first sites" },
   { n: "App Development", icon: 3, blurb: "Content, social and growth" },
+  { n: "", icon: "brand", blurb: "" },
   { n: "Graphic Design & AI Videos", icon: 0, blurb: "Brand visuals and reels" },
 ];
 
