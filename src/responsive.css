@@ -164,3 +164,42 @@ h1, h2, h3, p, li, a, label { overflow-wrap: break-word; }
   #ldr .ld-mark { width: min(150px, 30vh); }
   dialog[aria-label] img, dialog[aria-label] video { max-height: 70vh !important; max-height: 70dvh !important; }
 }
+
+/* =========================================================================
+   Preloader: centred on every screen, no white flash, no stray shades
+   ========================================================================= */
+/* Exactly the visible screen (the old min-h-screen = 100vh was taller than a phone's
+   visible area, which pushed the content off-centre and left a strip when it lifted) */
+#ldr {
+  min-height: 0 !important;
+  height: 100vh; height: 100dvh;
+  background: #05030e;                 /* same colour as the page: no lighter "shade" behind the curtain */
+  touch-action: none;                  /* page can't be scrolled/dragged while loading */
+  overscroll-behavior: none;
+}
+html.ldg { overflow: hidden; overscroll-behavior: none; }
+
+/* ROOT CAUSE of the off-centre loader: #ldr is a grid and the particle layer was an extra in-flow
+   row, so the logo block sat in the lower half. Particles now float behind; content is the only row. */
+#ldr .ld-px { position: absolute; inset: 0; pointer-events: none; }
+#ldr .ld-c { grid-area: 1 / 1; }
+
+/* One even rhythm (gap) instead of gap + stacked margins, so the block is truly centred */
+#ldr .ld-c { width: min(92vw, 420px) !important; padding: 0; gap: 16px; margin: 0 auto !important; }
+#ldr .ld-c > * { margin-top: 0 !important; margin-bottom: 0 !important; }
+#ldr .ld-mark { margin-inline: auto; }
+#ldr .ld-c p { text-align: center; text-wrap: balance; max-width: 100%; }
+#ldr .ld-bar { width: min(240px, 62vw); }
+
+@media (max-width: 480px) {
+  #ldr .ld-c p { font-size: .66rem; letter-spacing: .14em; }
+  #ldr .ld-mark { width: min(190px, 56vw); }
+}
+@media (max-width: 360px) {
+  #ldr .ld-c p { font-size: .62rem; letter-spacing: .1em; }
+}
+@media (max-height: 480px) and (orientation: landscape) {
+  #ldr .ld-c { gap: 8px; }
+  #ldr .ld-n { font-size: 2rem; }
+  #ldr .ld-c p { display: none; }
+}
